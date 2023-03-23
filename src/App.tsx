@@ -1,11 +1,11 @@
-import { Bell, BookmarkSimple, DotsThreeCircle, Envelope, FileText, Hash, House, User } from 'phosphor-react'
+import { Bell, BookmarkSimple, DotsThreeCircle, Envelope, FileText, Hash, House, Sparkle, User } from 'phosphor-react'
 
 import twiiterLogoImg from './assets/logo-twitter.svg'
 import './styles/style.css'
 
 function App () {
   return (
-    <section className="layout">
+    <div className="layout">
       <aside className="sidebar">
         <img src={twiiterLogoImg} alt="Twitter Logo" className="logo" />
 
@@ -47,10 +47,25 @@ function App () {
           Tweet
         </button>
       </aside>
-      <div className="content">
-        Content
-      </div>
-    </section>
+      <main className="content">
+        <div className="timeline">
+          <div className="timeline-header">
+            Home
+            <Sparkle />
+          </div>
+          <form className="new-tweet-form">
+            <label htmlFor="tweet">
+              <img src="https://github.com/Gui-dev.png" alt="Gui Silva" />
+              <textarea id="tweet" placeholder="What's happening?"></textarea>
+            </label>
+            <button type="submit">
+              Tweet
+            </button>
+          </form>
+          <div className="separator" />
+        </div>
+      </main>
+    </div>
   )
 }
 
