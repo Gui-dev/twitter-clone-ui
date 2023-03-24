@@ -1,59 +1,17 @@
-import { Bell, BookmarkSimple, DotsThreeCircle, Envelope, FileText, Hash, House, Sparkle, User } from 'phosphor-react'
-
-import twiiterLogoImg from './assets/logo-twitter.svg'
+import { Header } from './components/Header'
+import { Separator } from './components/Separator'
+import { Sidebar } from './components/Sidebar'
 import { Tweet } from './components/Tweet'
 import './styles/style.css'
 
 function App () {
   return (
     <div className="layout">
-      <aside className="sidebar">
-        <img src={twiiterLogoImg} alt="Twitter Logo" className="logo" />
-
-        <nav className="main-navigation">
-          <a href="#" className="active">
-            <House weight="fill" />
-            Home
-          </a>
-          <a href="#">
-            <Hash />
-            Explore
-          </a>
-          <a href="#">
-            <Bell />
-            Notifications
-          </a>
-          <a href="#">
-            <Envelope />
-            Messages
-          </a>
-          <a href="#">
-            <BookmarkSimple />
-            Bookmarks
-          </a>
-          <a href="#">
-            <FileText />
-            Lists
-          </a>
-          <a href="#">
-            <User />
-            Profile
-          </a>
-          <a href="#">
-            <DotsThreeCircle />
-            More
-          </a>
-        </nav>
-        <button type="button" className="new-tweet">
-          Tweet
-        </button>
-      </aside>
+      <Sidebar />
       <main className="content">
         <div className="timeline">
-          <div className="timeline-header">
-            Home
-            <Sparkle />
-          </div>
+          <Header title="Home" />
+
           <form className="new-tweet-form">
             <label htmlFor="tweet">
               <img src="https://github.com/Gui-dev.png" alt="Gui Silva" />
@@ -63,10 +21,9 @@ function App () {
               Tweet
             </button>
           </form>
-          <div className="separator" />
 
-          <Tweet />
-          <Tweet />
+          <Separator />
+
           <Tweet />
           <Tweet />
         </div>
