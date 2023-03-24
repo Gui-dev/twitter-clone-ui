@@ -1,6 +1,7 @@
 import { Bell, BookmarkSimple, DotsThreeCircle, Envelope, FileText, Hash, House, Sparkle, User } from 'phosphor-react'
 
 import twiiterLogoImg from './assets/logo-twitter.svg'
+import { Tweet } from './components/Tweet'
 import './styles/style.css'
 
 function App () {
@@ -63,6 +64,11 @@ function App () {
             </button>
           </form>
           <div className="separator" />
+
+          <Tweet />
+          <Tweet />
+          <Tweet />
+          <Tweet />
         </div>
       </main>
     </div>
