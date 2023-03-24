@@ -4,6 +4,8 @@ import { Sidebar } from './components/Sidebar'
 import { Tweet } from './components/Tweet'
 import './styles/style.css'
 
+import fakeTweets from './tweets.json'
+
 function App () {
   return (
     <div className="layout">
@@ -24,8 +26,11 @@ function App () {
 
           <Separator />
 
-          <Tweet />
-          <Tweet />
+          {fakeTweets.map(tweet => {
+            return (
+              <Tweet key={tweet.id} tweet={tweet} />
+            )
+          })}
         </div>
       </main>
     </div>
