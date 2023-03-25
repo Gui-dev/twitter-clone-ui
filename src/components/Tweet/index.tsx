@@ -1,23 +1,21 @@
 import { ArrowClockwise, ChatCircle, Heart } from 'phosphor-react'
 import './style.css'
 
-interface ITweet {
-  tweet: {
-    id: string
-    name: string
-    user: string
-    image_url: string
-    tweet: string
-    comments: number
-    retweets: number
-    likes: number
-  }
+export interface ITweet {
+  id: string
+  name: string
+  user: string
+  image_url: string
+  tweet: string
+  comments: number
+  retweets: number
+  likes: number
 }
 
-export const Tweet = ({ tweet }: ITweet) => {
+export const Tweet = (tweet: ITweet) => {
   return (
     <article>
-      <a href={`/tweet/${tweet.id}`} className="tweet">
+      <a href={`/status/${tweet.id}`} className="tweet">
         <img src={tweet.image_url} alt={tweet.name} />
         <div className="tweet-content">
           <div className="tweet-content-header">

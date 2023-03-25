@@ -25,7 +25,7 @@ export const Home = () => {
 
       {fakeTweets.map(tweet => {
         return (
-          <Tweet key={tweet.id} tweet={tweet} />
+          <Tweet key={tweet.id} {...tweet} />
         )
       })}
     </div>
