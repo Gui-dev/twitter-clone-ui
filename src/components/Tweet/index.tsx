@@ -3,7 +3,8 @@ import './style.css'
 
 interface ITweet {
   tweet: {
-    name: string,
+    id: string
+    name: string
     user: string
     image_url: string
     tweet: string
@@ -16,7 +17,7 @@ interface ITweet {
 export const Tweet = ({ tweet }: ITweet) => {
   return (
     <article>
-      <a className="tweet">
+      <a href={`/tweet/${tweet.id}`} className="tweet">
         <img src={tweet.image_url} alt={tweet.name} />
         <div className="tweet-content">
           <div className="tweet-content-header">
