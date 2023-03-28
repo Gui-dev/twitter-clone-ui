@@ -1,4 +1,4 @@
-import { Bell, BookmarkSimple, DotsThreeCircle, Envelope, FileText, Hash, House, User } from 'phosphor-react'
+import { Bell, BookmarkSimple, DotsThreeCircle, Envelope, FileText, Hash, House, Pencil, User } from 'phosphor-react'
 import { Link, NavLink } from 'react-router-dom'
 
 import twiiterLogoImg from './../../assets/logo-twitter.svg'
@@ -12,39 +12,40 @@ export const Sidebar = () => {
       <nav className="main-navigation">
         <NavLink to="/" className="active">
           <House weight="fill" />
-          Home
+          <span>Home</span>
         </NavLink>
         <Link to="#">
           <Hash />
-          Explore
+          <span>Explore</span>
         </Link>
         <Link to="#">
           <Bell />
-          Notifications
+          <span>Notifications</span>
         </Link>
         <Link to="#">
           <Envelope />
-          Messages
+          <span>Messages</span>
         </Link>
         <Link to="#">
           <BookmarkSimple />
-          Bookmarks
+          <span>Bookmarks</span>
         </Link>
         <Link to="#">
           <FileText />
-          Lists
+          <span></span>
         </Link>
         <Link to="#">
           <User />
-          Profile
+          <span>Profile</span>
         </Link>
         <Link to="#">
           <DotsThreeCircle />
-          More
+          <span>More</span>
         </Link>
       </nav>
       <button type="button" className="new-tweet">
-        Tweet
+        <Pencil />
+        <span>Tweet</span>
       </button>
     </aside>
   )

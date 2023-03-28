@@ -52,6 +52,31 @@
   border-radius: 9999px;
 }
 
+.new-tweet svg {
+  height: 1.5rem;
+  width: 1.5rem;
+  display: none;
+}
+
 .new-tweet:hover {
   filter: brightness(0.9);
+}
+
+@media (max-width: 780px) {
+  .sidebar {
+    align-items: center;
+    padding: 1.5rem 0.75rem;
+  }
+
+  .main-navigation a span {
+    display: none;
+  }
+
+  .new-tweet svg {
+    display: block;
+  }
+
+  .new-tweet span {
+    display: none;
+  }
 }

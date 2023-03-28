@@ -1,3 +1,4 @@
+import { PaperPlaneRight } from 'phosphor-react'
 import { FormEvent, KeyboardEvent, useState } from 'react'
 import { Header } from '../../components/Header'
 import { Separator } from '../../components/Separator'
@@ -61,7 +62,8 @@ export const Home = () => {
           </textarea>
         </label>
         <button type="submit">
-          Tweet
+          <PaperPlaneRight />
+          <span>Tweet</span>
         </button>
       </form>
 

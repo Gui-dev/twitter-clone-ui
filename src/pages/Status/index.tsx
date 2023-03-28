@@ -9,6 +9,7 @@ import fakeTweets from './../../tweets.json'
 import fakeAnswers from './../../fakes-answers.json'
 
 import './style.css'
+import { PaperPlaneRight } from 'phosphor-react'
 
 export const Status = () => {
   const [tweet, setTweet] = useState<ITweet>({} as ITweet)
@@ -34,7 +35,8 @@ export const Status = () => {
           <textarea id="tweet" placeholder="Tweet your answer"></textarea>
         </label>
         <button type="submit">
-          Answer
+          <PaperPlaneRight />
+          <span>Answer</span>
         </button>
       </form>
 
